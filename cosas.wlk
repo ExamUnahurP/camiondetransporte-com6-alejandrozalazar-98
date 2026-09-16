@@ -138,7 +138,7 @@ object embalajeDeSeguridad{
 
     method peligrosidad(){
 
-        return contenidoEmbalado.peligrosidad() / 2
+        return contenidoEmbalado.peligrosidad()/2
     }
 }
 
