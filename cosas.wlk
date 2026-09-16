@@ -6,7 +6,7 @@ object knightRider {
 
 }
 
-object Bumblebee {
+object bumblebee {
 
     method peso() = 800
 
@@ -95,7 +95,7 @@ object contenedorPortuario{
 
     const carga = []
 
-    vas
+    var peligrosidad = 0
 
     method agregarCarga(unObjeto){
         carga.add(unObjeto)
@@ -114,7 +114,14 @@ object contenedorPortuario{
     }
 
     method peligrosidad(){
-        
+        if(!carga.isEmpty){
+            return maximaPeligrosidad()
+        }
+        else{
+            return 0
+        }
     }
 }
+
+
 
