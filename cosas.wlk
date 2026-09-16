@@ -110,7 +110,7 @@ object contenedorPortuario{
         return 100
         }
         else{
-            return 100 + pesoTotalCarga()
+            return 100 + self.pesoTotalCarga()
         }
     }
 
@@ -119,14 +119,21 @@ object contenedorPortuario{
     }
 
     method peligrosidad(){
-        if(carga.isEmpty(){
+        if(carga.isEmpty()){
             return 0
         }
         else{
-            return maximaPeligrosidad()
+            return self.maximaPeligrosidad()
         }
     }
 }
 
+object embalajeDeSeguridad{
+
+    var contenidoEmbalado = bumblebee
+
+    peso = 
+
+}
 
 
