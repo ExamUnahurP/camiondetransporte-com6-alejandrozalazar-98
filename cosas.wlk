@@ -91,4 +91,15 @@ object bateriaAntiaerea{
 
 }
 
-oj
+object contenedorPortuario{
+
+    const carga = []
+
+    method agregarCarga(unObjeto){
+        carga.add(unObjeto)
+    }
+
+    method peso(){
+        return 100 + carga.sum(c=)
+    }
+}
