@@ -95,11 +95,26 @@ object contenedorPortuario{
 
     const carga = []
 
+    vas
+
     method agregarCarga(unObjeto){
         carga.add(unObjeto)
     }
 
+    method pesoTotalCarga(){
+        return carga.sum({c=>c.peso()})
+    }
+    
     method peso(){
-        return 100 + carga.sum(c=)
+        return 100 + pesoTotalcarga()
+    }
+
+    method maximaPeligrosidad(){
+        return carga.max({c=>c.peligrosidad()})
+    }
+
+    method peligrosidad(){
+        
     }
 }
+
