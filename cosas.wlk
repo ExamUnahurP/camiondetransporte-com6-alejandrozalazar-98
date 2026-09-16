@@ -35,6 +35,60 @@ object PaqueteDeLadrillos{
         cantLadrillos = nuevaCantidad
     }
 
-    method 
+    method peso(){
+        return cantLadrillos * 2
+    }
+
+    method peligrosidad{
+        return 2
+    }
 
 }
+
+object arenaAGranel{
+
+    var peso = 0
+
+    method peso(){
+        return peso
+    }
+
+    method cambiarPeso(nuevoPeso){
+        peso = nuevoPeso
+    }
+
+    method peligrosidad(){
+        return 1
+    }
+
+}
+
+object bateriaAntiaerea{
+
+    var estaConMisiles = true
+
+    method cambiarEstadoBateria(){
+        estaConMisiles = !estaConMisiles
+    }
+    
+    method peso(){
+        if (estaConMisiles){
+            return 300
+        }
+        else{
+            return 200
+        }
+    }
+
+    method peligrosidad{
+        if(estaConMisiles){
+            return 100
+        }
+        else{
+            return 0
+        }
+    }
+
+}
+
+oj
