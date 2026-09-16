@@ -11,12 +11,12 @@ object bumblebee {
     method peso() = 800
 
     var esAuto = true
-
-    method trasformar(){
+    
+    method transformar(){
         esAuto = !esAuto
     }
 
-    method peligrosidad(esAuto){
+    method peligrosidad(){
         if (esAuto){
             return 15
             }
@@ -39,7 +39,7 @@ object PaqueteDeLadrillos{
         return cantLadrillos * 2
     }
 
-    method peligrosidad{
+    method peligrosidad(){
         return 2
     }
 
@@ -80,7 +80,7 @@ object bateriaAntiaerea{
         }
     }
 
-    method peligrosidad{
+    method peligrosidad(){
         if(estaConMisiles){
             return 100
         }
@@ -106,7 +106,12 @@ object contenedorPortuario{
     }
     
     method peso(){
+        if(!carga.isEmpty){
         return 100 + pesoTotalcarga()
+        }
+        else{
+            return 100
+        }
     }
 
     method maximaPeligrosidad(){
