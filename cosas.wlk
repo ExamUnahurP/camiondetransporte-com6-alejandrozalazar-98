@@ -132,8 +132,14 @@ object embalajeDeSeguridad{
 
     var contenidoEmbalado = bumblebee
 
-    peso = 
+    method peso(){
+        return contenidoEmbalado.peso()
+    }
 
+    method peligrosidad(){
+
+        return contenidoEmbalado.peligrosidad() / 2
+    }
 }
 
 
