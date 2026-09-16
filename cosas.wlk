@@ -10,10 +10,31 @@ object Bumblebee {
 
     method peso() = 800
 
-    var estaTransformado = true
+    var esAuto = true
 
     method trasformar(){
-        estaTrasformado = !estaTransformado
+        esAuto = !esAuto
     }
+
+    method peligrosidad(esAuto){
+        if (esAuto){
+            return 15
+            }
+        else{
+            return 30
+            }//15 auto  30 robot
+    }
+
+}
+
+object PaqueteDeLadrillos{
+
+    var cantLadrillos = 0
+
+    method cambiarCantidadLadrillos(nuevaCantidad){
+        cantLadrillos = nuevaCantidad
+    }
+
+    method 
 
 }
