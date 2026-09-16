@@ -27,5 +27,19 @@ object camion {
         carga.all({c=>c.peso().even()})
     }
 
-    method existe
-}
+    method existePeso(unPeso){
+
+        return carga.any({c=>c.peso() == unPeso})
+    }
+
+    method existePeligrosidad(unNivel){
+        return carga.find({c=>c.peligrosidad() == unNivel})
+    }
+
+    method superaPeligrosidad(unNivel){
+        return carga.filter({c=>c.peligrosidad() == unNivel})
+    }
+
+    method 
+
+}    
