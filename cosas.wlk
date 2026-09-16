@@ -106,11 +106,11 @@ object contenedorPortuario{
     }
     
     method peso(){
-        if(!carga.isEmpty){
-        return 100 + pesoTotalcarga()
+        if(carga.isEmpty()){
+        return 100
         }
         else{
-            return 100
+            return 100 + pesoTotalCarga()
         }
     }
 
@@ -119,11 +119,11 @@ object contenedorPortuario{
     }
 
     method peligrosidad(){
-        if(!carga.isEmpty){
-            return maximaPeligrosidad()
+        if(carga.isEmpty(){
+            return 0
         }
         else{
-            return 0
+            return maximaPeligrosidad()
         }
     }
 }
