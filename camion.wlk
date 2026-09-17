@@ -1,3 +1,5 @@
+import cosas.*
+
 object camion {
 
     const carga = []
@@ -37,9 +39,18 @@ object camion {
     }
 
     method superaPeligrosidad(unNivel){
-        return carga.filter({c=>c.peligrosidad() == unNivel})
+        return carga.filter({c=>c.peligrosidad() > unNivel})
+
     }
 
-    method 
+    method superaPeligrosidadObjeto(otroObjeto){
 
-}    
+        return carga.filter({c=>c.peligrosidad() > otroObjeto.peligrosidad()})
+
+    } 
+
+    method exidoPeso(){
+        return self.peso() > 2500
+    }
+
+}   method puede
