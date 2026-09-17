@@ -49,8 +49,11 @@ object camion {
 
     } 
 
-    method exidoPeso(){
+    method excedidoPeso(){
         return self.peso() > 2500
     }
 
-}   method puede
+   method puedeViajarRuta(peligrosidadMax){
+        return not self.excedidoPeso() and carga.all({c=>c.peligrosidad() > peligrosidadMax))
+    }
+}
